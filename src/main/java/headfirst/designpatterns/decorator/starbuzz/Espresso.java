@@ -3,7 +3,8 @@ package headfirst.designpatterns.decorator.starbuzz;
 public class Espresso extends Beverage {
   
 	public Espresso() {
-		description = "Espresso";
+		super();
+		super.description = "Espresso";
 	}
   
 	public double cost() {

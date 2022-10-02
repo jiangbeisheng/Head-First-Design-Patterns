@@ -3,8 +3,8 @@ package headfirst.designpatterns.strategy;
 public class RedHeadDuck extends Duck {
  
 	public RedHeadDuck() {
-		flyBehavior = new FlyWithWings();
-		quackBehavior = new Quack();
+		super.flyBehavior = new FlyWithWings();
+		super.quackBehavior = new Quack();
 	}
  
 	public void display() {

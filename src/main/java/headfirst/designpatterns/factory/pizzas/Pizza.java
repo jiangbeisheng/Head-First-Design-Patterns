@@ -1,8 +1,13 @@
 package headfirst.designpatterns.factory.pizzas;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 abstract public class Pizza {
+	public Pizza() {
+		System.out.println("父类构造被访问✅Pizza");
+	}
+
 	String name;
 	String dough;
 	String sauce;

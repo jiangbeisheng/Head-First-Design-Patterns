@@ -2,6 +2,7 @@ package headfirst.designpatterns.factory.pizzas;
 
 public class PepperoniPizza extends Pizza {
 	public PepperoniPizza() {
+		super();
 		name = "Pepperoni Pizza";
 		dough = "Crust";
 		sauce = "Marinara sauce";

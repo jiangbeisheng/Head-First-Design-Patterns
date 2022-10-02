@@ -10,15 +10,15 @@ public class WeatherData extends Observable {
 	public WeatherData() { }
 	
 	public void measurementsChanged() {
-		setChanged();
-		notifyObservers();
+		super.setChanged();
+		super.notifyObservers(); //没有传数据对象，所以是拉模式
 	}
 	
 	public void setMeasurements(float temperature, float humidity, float pressure) {
 		this.temperature = temperature;
 		this.humidity = humidity;
 		this.pressure = pressure;
-		measurementsChanged();
+		this.measurementsChanged();
 	}
 	
 	public float getTemperature() {

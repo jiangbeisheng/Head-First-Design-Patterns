@@ -2,7 +2,7 @@ package headfirst.designpatterns.decorator.starbuzz;
 
 public class HouseBlend extends Beverage {
 	public HouseBlend() {
-		description = "House Blend Coffee";
+		super.description = "House Blend Coffee";
 	}
  
 	public double cost() {
