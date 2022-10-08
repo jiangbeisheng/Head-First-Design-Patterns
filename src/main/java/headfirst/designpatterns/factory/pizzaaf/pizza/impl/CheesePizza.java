@@ -25,11 +25,12 @@ public class CheesePizza extends Pizza {
 
     /**
      * 一步一步创建芝士披萨，每当需要原料时，就跟工厂要
+     * 在抽象prepare方法将原料赋值给父类的中的变量，这样父类在
      */
     public void prepare() {
         System.out.println("Preparing " + name);
-        dough = ingredientFactory.createDough();
-        sauce = ingredientFactory.createSauce();
-        cheese = ingredientFactory.createCheese();
+        super.dough = ingredientFactory.createDough();
+        super.sauce = ingredientFactory.createSauce();
+        super.cheese = ingredientFactory.createCheese();
     }
 }
