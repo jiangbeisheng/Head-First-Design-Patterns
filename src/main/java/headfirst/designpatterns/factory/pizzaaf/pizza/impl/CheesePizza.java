@@ -16,6 +16,7 @@ public class CheesePizza extends Pizza {
      * 芝士披萨类带参构造。
      * 要制作披萨需要工厂提供原料，所以每个披萨类都需要从构造器参数中得到一个工厂，
      * 并把这个工厂存储在一个实例变量中。
+     * 从而实现了工艺和原料工厂解耦，以便将来方便换工厂
      *
      * @param ingredientFactory 配料厂
      */

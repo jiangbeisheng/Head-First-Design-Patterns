@@ -40,6 +40,7 @@ public abstract class Pizza {
 
     /**
      * 在这个方法中，我们需要收集披萨所需的原料，而这些原料当然是来着原料工厂了
+     * 将工艺和工厂解耦，从而实现了工艺和原料工厂解耦，以便将来方便换工厂
      */
     public abstract void prepare();
 
