@@ -4,6 +4,8 @@ import headfirst.designpatterns.factory.pizzaaf.materials.*;
 
 /**
  * 披萨配料工厂（Ingredient 组分）
+ * 工厂提供各种原材料给Pizza，Pizza在商店中制作
+ * 所以Pizza类通过构造获取工厂，商店类通过抽象接口来拓展各种Pizza
  *
  * @author lucas
  * @since 2022年10月02日11:02:46
