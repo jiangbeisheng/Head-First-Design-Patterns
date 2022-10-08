@@ -3,7 +3,6 @@ package headfirst.designpatterns.factory.pizzaaf.factory.impl;
 import headfirst.designpatterns.factory.pizzaaf.factory.PizzaIngredientFactory;
 import headfirst.designpatterns.factory.pizzaaf.materials.*;
 import headfirst.designpatterns.factory.pizzaaf.materials.impl.*;
-import headfirst.designpatterns.factory.pizzaaf.store.impl.MozzarellaCheese;
 
 /**
  * 芝加哥披萨配料厂

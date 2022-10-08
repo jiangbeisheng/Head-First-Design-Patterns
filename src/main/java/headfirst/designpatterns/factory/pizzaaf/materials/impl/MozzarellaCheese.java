@@ -1,4 +1,4 @@
-package headfirst.designpatterns.factory.pizzaaf.store.impl;
+package headfirst.designpatterns.factory.pizzaaf.materials.impl;
 
 import headfirst.designpatterns.factory.pizzaaf.materials.Cheese;
 
