@@ -1,12 +1,16 @@
 package headfirst.designpatterns.singleton.subclass;
 
+/**
+ * 冷却器单体
+ *
+ * @author lucas
+ * @since 2022年11月09日22:11:41
+ */
 public class CoolerSingleton extends Singleton {
-	// useful instance variables here
-	protected static Singleton uniqueInstance;
- 
-	private CoolerSingleton() {
-		super();
-	}
- 
-	// useful methods here
+    protected static Singleton uniqueInstance;
+
+    private CoolerSingleton() {
+        super();
+    }
+
 }

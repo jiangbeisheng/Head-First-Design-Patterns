@@ -22,6 +22,7 @@ public class Singleton {
 
     /**
      * 公开静态方法获取单例对象
+     * 多线程下不安全，多个线程同时来到发现为null都创建了对象
      *
      * @return 单例对象
      */
