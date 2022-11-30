@@ -1,17 +1,37 @@
 package headfirst.designpatterns.command.party;
 
+/**
+ * 立体声打开命令
+ *
+ * @author lucas
+ * @since 2022年11月30日13:56:38
+ */
 public class StereoOnCommand implements Command {
-	Stereo stereo;
+    /**
+     * 立体声
+     */
+    Stereo stereo;
 
-	public StereoOnCommand(Stereo stereo) {
-		this.stereo = stereo;
-	}
+    /**
+     * 构造
+     *
+     * @param stereo 立体声
+     */
+    public StereoOnCommand(Stereo stereo) {
+        this.stereo = stereo;
+    }
 
-	public void execute() {
-		stereo.on();
-	}
+    /**
+     * 执行
+     */
+    public void execute() {
+        stereo.on();
+    }
 
-	public void undo() {
-		stereo.off();
-	}
+    /**
+     * 撤销
+     */
+    public void undo() {
+        stereo.off();
+    }
 }

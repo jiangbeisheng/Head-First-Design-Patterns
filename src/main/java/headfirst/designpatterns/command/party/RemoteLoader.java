@@ -22,7 +22,7 @@ public class RemoteLoader {
 
 		Command[] partyOn = { lightOn, stereoOn, tvOn, hottubOn};
 		Command[] partyOff = { lightOff, stereoOff, tvOff, hottubOff};
-  
+
 		MacroCommand partyOnMacro = new MacroCommand(partyOn);
 		MacroCommand partyOffMacro = new MacroCommand(partyOff);
  

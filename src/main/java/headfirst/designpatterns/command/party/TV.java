@@ -1,23 +1,49 @@
 package headfirst.designpatterns.command.party;
 
+/**
+ * 电视
+ *
+ * @author lucas
+ * @since 2022年11月30日11:15:33
+ */
 public class TV {
-	String location;
-	int channel;
+    /**
+     * 位置
+     */
+    String location;
+    /**
+     * 频道
+     */
+    int channel;
 
-	public TV(String location) {
-		this.location = location;
-	}
+    /**
+     * 构造
+     *
+     * @param location 位置
+     */
+    public TV(String location) {
+        this.location = location;
+    }
 
-	public void on() {
-		System.out.println(location + " TV is on");
-	}
+    /**
+     * 开
+     */
+    public void on() {
+        System.out.println(location + " TV is on");
+    }
 
-	public void off() {
-		System.out.println(location + " TV is off");
-	}
+    /**
+     * 关
+     */
+    public void off() {
+        System.out.println(location + " TV is off");
+    }
 
-	public void setInputChannel() {
-		this.channel = 3;
-		System.out.println(location + " TV channel is set for DVD");
-	}
+    /**
+     * 设置输入频道
+     */
+    public void setInputChannel() {
+        this.channel = 3;
+        System.out.println(location + " TV channel is set for DVD");
+    }
 }

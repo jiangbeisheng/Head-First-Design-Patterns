@@ -1,17 +1,37 @@
 package headfirst.designpatterns.command.party;
 
+/**
+ * 亮灯命令
+ *
+ * @author lucas
+ * @since 2022年11月30日11:27:17
+ */
 public class LightOnCommand implements Command {
-	Light light;
+    /**
+     * 开灯
+     */
+    Light light;
 
-	public LightOnCommand(Light light) {
-		this.light = light;
-	}
+    /**
+     * 构造
+     *
+     * @param light 灯
+     */
+    public LightOnCommand(Light light) {
+        this.light = light;
+    }
 
-	public void execute() {
-		light.on();
-	}
+    /**
+     * 执行
+     */
+    public void execute() {
+        light.on();
+    }
 
-	public void undo() {
-		light.off();
-	}
+    /**
+     * 撤销
+     */
+    public void undo() {
+        light.off();
+    }
 }

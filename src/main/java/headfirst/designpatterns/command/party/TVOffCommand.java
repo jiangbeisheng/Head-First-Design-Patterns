@@ -1,17 +1,37 @@
 package headfirst.designpatterns.command.party;
 
+/**
+ * 电视关闭命令
+ *
+ * @author lucas
+ * @since 2022年11月30日14:21:40
+ */
 public class TVOffCommand implements Command {
-	TV tv;
+    /**
+     * 电视
+     */
+    TV tv;
 
-	public TVOffCommand(TV tv) {
-		this.tv= tv;
-	}
+    /**
+     * 构造
+     *
+     * @param tv 电视
+     */
+    public TVOffCommand(TV tv) {
+        this.tv = tv;
+    }
 
-	public void execute() {
-		tv.off();
-	}
+    /**
+     * 执行
+     */
+    public void execute() {
+        tv.off();
+    }
 
-	public void undo() {
-		tv.on();
-	}
+    /**
+     * 撤销
+     */
+    public void undo() {
+        tv.on();
+    }
 }

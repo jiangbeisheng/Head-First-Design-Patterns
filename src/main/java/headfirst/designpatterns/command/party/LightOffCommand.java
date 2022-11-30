@@ -1,17 +1,37 @@
 package headfirst.designpatterns.command.party;
 
+/**
+ * 灯光关闭命令
+ *
+ * @author lucas
+ * @since 2022年11月30日14:17:46
+ */
 public class LightOffCommand implements Command {
-	Light light;
+    /**
+     * 灯
+     */
+    Light light;
 
-	public LightOffCommand(Light light) {
-		this.light = light;
-	}
+    /**
+     * 灯光关闭命令
+     *
+     * @param light 灯
+     */
+    public LightOffCommand(Light light) {
+        this.light = light;
+    }
 
-	public void execute() {
-		light.off();
-	}
+    /**
+     * 执行关
+     */
+    public void execute() {
+        light.off();
+    }
 
-	public void undo() {
-		light.on();
-	}
+    /**
+     * 撤销
+     */
+    public void undo() {
+        light.on();
+    }
 }

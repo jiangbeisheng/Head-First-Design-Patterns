@@ -1,52 +1,93 @@
 package headfirst.designpatterns.command.party;
 
-//
-// This is the invoker
-//
+/**
+ * 远程控制
+ *
+ * @author lucas
+ * @since 2022年11月28日17:28:59
+ */
 public class RemoteControl {
-	Command[] onCommands;
-	Command[] offCommands;
-	Command undoCommand;
- 
-	public RemoteControl() {
-		onCommands = new Command[7];
-		offCommands = new Command[7];
- 
-		Command noCommand = new NoCommand();
-		for(int i=0;i<7;i++) {
-			onCommands[i] = noCommand;
-			offCommands[i] = noCommand;
-		}
-		undoCommand = noCommand;
-	}
-  
-	public void setCommand(int slot, Command onCommand, Command offCommand) {
-		onCommands[slot] = onCommand;
-		offCommands[slot] = offCommand;
-	}
- 
-	public void onButtonWasPushed(int slot) {
-		onCommands[slot].execute();
-		undoCommand = onCommands[slot];
-	}
- 
-	public void offButtonWasPushed(int slot) {
-		offCommands[slot].execute();
-		undoCommand = offCommands[slot];
-	}
+    /**
+     * 打开命令集合
+     */
+    Command[] onCommands;
+    /**
+     * 关闭命令集合
+     */
+    Command[] offCommands;
+    /**
+     * 撤消命令
+     */
+    Command undoCommand;
 
-	public void undoButtonWasPushed() {
-		undoCommand.undo();
-	}
- 
-	public String toString() {
-		StringBuffer stringBuff = new StringBuffer();
-		stringBuff.append("\n------ Remote Control -------\n");
-		for (int i = 0; i < onCommands.length; i++) {
-			stringBuff.append("[slot " + i + "] " + onCommands[i].getClass().getName()
-				+ "    " + offCommands[i].getClass().getName() + "\n");
-		}
-		stringBuff.append("[undo] " + undoCommand.getClass().getName() + "\n");
-		return stringBuff.toString();
-	}
+    /**
+     * 远程控制构造方法
+     * 初始化插槽
+     */
+    public RemoteControl() {
+        onCommands = new Command[7];
+        offCommands = new Command[7];
+
+        Command noCommand = new NoCommand();
+        for (int i = 0; i < 7; i++) {
+            onCommands[i] = noCommand;
+            offCommands[i] = noCommand;
+        }
+        undoCommand = noCommand;
+    }
+
+    /**
+     * 设置命令
+     *
+     * @param slot       插槽的为准
+     * @param onCommand  开的命令
+     * @param offCommand 关的命令
+     */
+    public void setCommand(int slot, Command onCommand, Command offCommand) {
+        onCommands[slot] = onCommand;
+        offCommands[slot] = offCommand;
+    }
+
+    /**
+     * 当按钮被按下
+     *
+     * @param slot 插槽
+     */
+    public void onButtonWasPushed(int slot) {
+        onCommands[slot].execute();
+        undoCommand = onCommands[slot];
+    }
+
+    /**
+     * 按下关闭按钮
+     *
+     * @param slot 插槽
+     */
+    public void offButtonWasPushed(int slot) {
+        offCommands[slot].execute();
+        undoCommand = offCommands[slot];
+    }
+
+    /**
+     * 按下关闭按钮
+     */
+    public void undoButtonWasPushed() {
+        undoCommand.undo();
+    }
+
+    /**
+     * toString
+     *
+     * @return 字符串
+     */
+    public String toString() {
+        StringBuilder stringBuff = new StringBuilder();
+        stringBuff.append("\n------ Remote Control -------\n");
+        for (int i = 0; i < onCommands.length; i++) {
+            stringBuff.append("[slot " + i + "] " + onCommands[i].getClass().getName()
+                    + "    " + offCommands[i].getClass().getName() + "\n");
+        }
+        stringBuff.append("[undo] " + undoCommand.getClass().getName() + "\n");
+        return stringBuff.toString();
+    }
 }
