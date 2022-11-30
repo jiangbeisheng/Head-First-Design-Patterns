@@ -84,10 +84,9 @@ public class RemoteControl {
         StringBuilder stringBuff = new StringBuilder();
         stringBuff.append("\n------ Remote Control -------\n");
         for (int i = 0; i < onCommands.length; i++) {
-            stringBuff.append("[slot " + i + "] " + onCommands[i].getClass().getName()
-                    + "    " + offCommands[i].getClass().getName() + "\n");
+            stringBuff.append("[slot ").append(i).append("] ").append(onCommands[i].getClass().getName()).append("    ").append(offCommands[i].getClass().getName()).append("\n");
         }
-        stringBuff.append("[undo] " + undoCommand.getClass().getName() + "\n");
+        stringBuff.append("[undo] ").append(undoCommand.getClass().getName()).append("\n");
         return stringBuff.toString();
     }
 }
