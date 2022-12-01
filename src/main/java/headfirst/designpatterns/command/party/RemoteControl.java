@@ -39,7 +39,7 @@ public class RemoteControl {
     /**
      * 设置命令
      *
-     * @param slot       插槽的为准
+     * @param slot       插槽的位置
      * @param onCommand  开的命令
      * @param offCommand 关的命令
      */
@@ -84,7 +84,8 @@ public class RemoteControl {
         StringBuilder stringBuff = new StringBuilder();
         stringBuff.append("\n------ Remote Control -------\n");
         for (int i = 0; i < onCommands.length; i++) {
-            stringBuff.append("[slot ").append(i).append("] ").append(onCommands[i].getClass().getName()).append("    ").append(offCommands[i].getClass().getName()).append("\n");
+            stringBuff.append("[slot ").append(i).append("] ").append(onCommands[i].getClass().getName()).append("    ")
+                    .append(offCommands[i].getClass().getName()).append("\n");
         }
         stringBuff.append("[undo] ").append(undoCommand.getClass().getName()).append("\n");
         return stringBuff.toString();
