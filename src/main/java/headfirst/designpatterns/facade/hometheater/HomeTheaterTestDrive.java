@@ -7,6 +7,7 @@ package headfirst.designpatterns.facade.hometheater;
  * @since 2022年12月03日11:46:00
  */
 public class HomeTheaterTestDrive {
+
     public static void main(String[] args) {
         Amplifier amp = new Amplifier("Amplifier");
         Tuner tuner = new Tuner("AM/FM Tuner", amp);
