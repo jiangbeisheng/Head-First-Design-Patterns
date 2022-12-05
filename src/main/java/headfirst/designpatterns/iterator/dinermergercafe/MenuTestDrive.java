@@ -1,13 +1,19 @@
 package headfirst.designpatterns.iterator.dinermergercafe;
 
+/**
+ * 菜单测试类
+ *
+ * @author lucas
+ * @since 2022年12月05日13:40:06
+ */
 public class MenuTestDrive {
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
 		DinerMenu dinerMenu = new DinerMenu();
 		CafeMenu cafeMenu = new CafeMenu();
- 
+
 		Waitress waitress = new Waitress(pancakeHouseMenu, dinerMenu, cafeMenu);
- 
+
 		waitress.printMenu();
 		waitress.printVegetarianMenu();
 
